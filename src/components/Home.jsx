@@ -3,6 +3,7 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Player from './Player';
 import CardInfo from './CardInfo';
+import ArtistInfo from './ArtistInfo';
 import '../styles/home.css';
 
 const videos = [
@@ -49,10 +50,10 @@ class Home extends React.Component {
         <Paper elevation={9}>
           <p>Ａｓｔｈｅｔｈｉｃ　ゥゖゅ</p>
           <Player 
-          videos={videos[this.state.choosenVideo]}
-          handleChangeVideo={this.handleChangeVideo}
-          handlePauseVideo={this.handlePauseVideo}
-          pauseVideo={this.state.pauseVideo}
+            videos={videos[this.state.choosenVideo]}
+            handleChangeVideo={this.handleChangeVideo}
+            handlePauseVideo={this.handlePauseVideo}
+            pauseVideo={this.state.pauseVideo}
           />
         </Paper>
       </Grid>
@@ -65,7 +66,10 @@ class Home extends React.Component {
         </Paper>
       </Grid>
 
-      <Grid item xs={3}>Ａｒｔｉｓｔ　でンヒ</Grid>
+      <Grid item xs={3}>
+        Ａｒｔｉｓｔ　でンヒ
+        <ArtistInfo />
+      </Grid>
 
     </Grid>
       </div>
